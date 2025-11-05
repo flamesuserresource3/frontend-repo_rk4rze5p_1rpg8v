@@ -3,13 +3,12 @@ import EventDetails from './components/EventDetails';
 import RSVPSection from './components/RSVPSection';
 import LocationMap from './components/LocationMap';
 import FloralCorners from './components/FloralCorners';
+import ResponsiveShell from './components/ResponsiveShell';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#fffaf0] relative text-[#3c2f1e]">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#fff4ea]/50 to-[#fdeee7]/60 pointer-events-none" />
-
-      <main className="relative max-w-5xl mx-auto px-6 sm:px-8 md:px-10 py-10 sm:py-12">
+    <ResponsiveShell>
+      <main className="relative text-[#3c2f1e] px-6 sm:px-8 md:px-8 py-8 sm:py-10">
         <FloralCorners />
 
         <ElegantHeader />
@@ -30,7 +29,7 @@ function App() {
           With love, Aisyah & Fikri
         </footer>
       </main>
-    </div>
+    </ResponsiveShell>
   );
 }
 
