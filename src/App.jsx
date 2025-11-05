@@ -1,28 +1,37 @@
-import { useState } from 'react'
+import ElegantHeader from './components/ElegantHeader';
+import EventDetails from './components/EventDetails';
+import RSVPSection from './components/RSVPSection';
+import LocationMap from './components/LocationMap';
+import FloralCorners from './components/FloralCorners';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-[#fffaf0] relative text-[#3c2f1e]">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#fff4ea]/50 to-[#fdeee7]/60 pointer-events-none" />
+
+      <main className="relative max-w-5xl mx-auto px-6 sm:px-8 md:px-10 py-10 sm:py-12">
+        <FloralCorners />
+
+        <ElegantHeader />
+
+        <div className="mt-4 sm:mt-8">
+          <EventDetails />
         </div>
-      </div>
+
+        <div className="mt-10 sm:mt-14">
+          <RSVPSection />
+        </div>
+
+        <div className="mt-10 sm:mt-14">
+          <LocationMap />
+        </div>
+
+        <footer className="mt-16 sm:mt-20 text-center text-sm text-[#7d6b4d]">
+          With love, Aisyah & Fikri
+        </footer>
+      </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
